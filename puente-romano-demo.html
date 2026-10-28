@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Demo conceptual de experiencia digital para Puente Romano Marbella, creada por Transport AI.">
+<title>Puente Romano Marbella — Demo de experiencia digital</title>
+<style>
+:root{--ink:#1d2824;--cream:#f5f1e9;--sand:#d9c7a5;--olive:#68765b;--white:#fff;--muted:#6c746d;--line:rgba(29,40,36,.16)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.serif{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em}.topnote{background:var(--ink);color:#f5f1e9;text-align:center;padding:9px 16px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.nav{position:absolute;z-index:3;top:35px;left:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:26px 5.5%;color:#fff;border-bottom:1px solid #ffffff45}.brand{font-family:Georgia,serif;font-size:19px;letter-spacing:.17em;text-transform:uppercase;line-height:1.2}.brand small{display:block;font-family:Arial,sans-serif;font-size:8px;letter-spacing:.32em;text-align:center;margin-top:7px}.navlinks{display:flex;gap:25px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.navcta{border:1px solid #ffffffa0;padding:12px 16px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.hero{min-height:730px;height:91vh;max-height:950px;position:relative;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(180deg,rgba(10,20,15,.36),rgba(10,20,15,.08) 42%,rgba(10,20,15,.66)),url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,18,13,.35),transparent 75%)}.hero-content{position:relative;z-index:1;padding:0 8% 9%;max-width:900px}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase}.hero h1{font-size:clamp(54px,8.7vw,118px);line-height:.93;margin:25px 0 24px;max-width:850px}.hero p{font-size:15px;line-height:1.8;max-width:490px;color:#f3f1eb}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 21px;border:1px solid #fff;font-size:10px;letter-spacing:.15em;text-transform:uppercase;transition:.2s}.btn.light{background:#f5f1e9;color:var(--ink);border-color:#f5f1e9}.btn:hover{transform:translateY(-2px)}.scrollhint{position:absolute;right:5.5%;bottom:7%;writing-mode:vertical-rl;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#ffffffc9}.section{padding:105px 8%}.sectionhead{display:flex;justify-content:space-between;align-items:flex-end;gap:35px;margin-bottom:44px}.sectionhead h2{font-size:clamp(39px,5.4vw,70px);line-height:1.02;margin:15px 0 0;max-width:700px}.sectionhead p{max-width:350px;color:var(--muted);font-size:13px;line-height:1.8}.introgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:7%;align-items:center}.introimage{min-height:530px;background:url('https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=1300&q=85') center/cover}.introcopy{padding:30px 0}.introcopy h2{font-size:clamp(42px,5vw,68px);line-height:1.02;margin:18px 0 25px}.introcopy p,.bodycopy{color:var(--muted);font-size:14px;line-height:1.95}.textlink{display:inline-block;border-bottom:1px solid var(--ink);padding-bottom:8px;margin-top:20px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.dark{background:var(--ink);color:var(--cream)}.dark .sectionhead p,.dark .bodycopy{color:#c3c8bf}.featuregrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{min-width:0}.featureimg{height:350px;background-size:cover;background-position:center;position:relative}.feature:nth-child(1) .featureimg{background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85')}.feature:nth-child(2) .featureimg{background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85')}.feature:nth-child(3) .featureimg{background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbe-ce?auto=format&fit=crop&w=900&q=85')}.feature .num{font-size:10px;letter-spacing:.16em;color:var(--sand);margin-top:22px}.feature h3{font-size:31px;margin:9px 0 12px}.feature p{font-size:13px;line-height:1.8;color:#c3c8bf;max-width:330px}.feature .textlink{border-color:#b9c0b3}.food{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;align-items:center}.foodphoto{height:620px;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1300&q=85') center/cover}.food h2{font-size:clamp(43px,5.5vw,72px);line-height:1;margin:18px 0 25px}.food p{color:var(--muted);font-size:14px;line-height:1.9;max-width:500px}.restaurantlist{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:32px}.restaurantlist span{border-bottom:1px solid var(--line);padding:14px 0;font-family:Georgia,serif;font-size:19px}.quote{padding:115px 8%;text-align:center;background:#e7dfd0}.quote .mark{font-family:Georgia,serif;font-size:55px;color:var(--olive)}.quote h2{font-size:clamp(35px,5.6vw,68px);line-height:1.12;max-width:900px;margin:12px auto 25px}.quote p{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.location{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center}.locationvisual{min-height:430px;background:linear-gradient(0deg,#19231c50,#19231c10),url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1300&q=85') center/cover}.location h2{font-size:clamp(42px,5vw,65px);line-height:1.02;margin:17px 0}.address{font-size:13px;color:var(--muted);line-height:1.9}.footer{background:#16201b;color:#f5f1e9;padding:45px 6%;display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer small{font-size:10px;color:#c3c8bf;line-height:1.8}.footerbrand{font-family:Georgia,serif;letter-spacing:.15em;font-size:16px}.demo-label{position:fixed;z-index:5;bottom:14px;left:14px;background:#f5f1e9eF;border:1px solid #d6d0c4;padding:9px 12px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#27332c}.mobilemenu{display:none}
+@media(max-width:800px){.nav{padding:20px 5%}.navlinks{display:none}.navcta{padding:10px;font-size:9px}.brand{font-size:15px}.hero{min-height:700px;height:88vh}.hero-content{padding:0 7% 22%}.hero h1{font-size:clamp(54px,14vw,90px)}.hero p{font-size:14px}.scrollhint{display:none}.section{padding:75px 7%}.sectionhead{display:block}.sectionhead p{margin-top:22px}.introgrid,.food,.location{grid-template-columns:1fr;gap:30px}.introimage{min-height:390px;order:2}.introcopy{padding:0}.featuregrid{grid-template-columns:1fr;gap:38px}.featureimg{height:390px}.foodphoto{height:400px;order:2}.restaurantlist{grid-template-columns:1fr 1fr;gap:0 14px}.restaurantlist span{font-size:17px}.quote{padding:80px 7%}.locationvisual{min-height:340px}.footer{align-items:flex-start;flex-direction:column}.demo-label{font-size:8px}}
+@media(max-width:420px){.navcta{max-width:100px;text-align:center;line-height:1.5}.restaurantlist{grid-template-columns:1fr}.featureimg{height:330px}}
+</style>
+</head>
+<body>
+<div class="topnote">Marbella · Costa del Sol · Mediterranean living</div>
+<header class="nav">
+  <a class="brand" href="#inicio">Puente Romano<small>Marbella</small></a>
+  <nav class="navlinks" aria-label="Navegación principal"><a href="#estancia">Estancia</a><a href="#gastronomia">Gastronomía</a><a href="#experiencias">Experiencias</a><a href="#ubicacion">Ubicación</a></nav>
+  <a class="navcta" href="https://hotel.puenteromano.com/es/" target="_blank" rel="noreferrer">Web oficial ↗</a>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="eyebrow">Un refugio mediterráneo · Marbella</div>
+    <h1 class="serif">El arte de<br>vivir despacio.</h1>
+    <p>Un pueblo andaluz junto al mar. Jardines exuberantes, suites privadas y experiencias que convierten cada estancia en algo extraordinario.</p>
+    <div class="actions"><a class="btn light" href="#estancia">Descubrir el resort</a><a class="btn" href="#gastronomia">Explorar experiencias</a></div>
+  </div>
+  <div class="scrollhint">Descubre Puente Romano ↓</div>
+</section>
+<section class="section" id="estancia">
+ <div class="introgrid">
+  <div class="introimage" role="img" aria-label="Piscina y jardines de un resort mediterráneo"></div>
+  <div class="introcopy">
+   <div class="eyebrow">01 — La estancia</div>
+   <h2 class="serif">Un lugar para sentirse en otro mundo.</h2>
+   <p>Arquitectura de inspiración andaluza, vegetación mediterránea y espacios pensados para disfrutar sin prisas. Descubre una colección de suites y villas que conectan privacidad, diseño y naturaleza.</p>
+   <p class="bodycopy">Desde una escapada en pareja hasta una estancia con familia y amigos, cada espacio ofrece su propia manera de vivir Marbella.</p>
+   <a class="textlink" href="https://hotel.puenteromano.com/es/alojamiento/" target="_blank" rel="noreferrer">Explorar suites y villas ↗</a>
+  </div>
+ </div>
+</section>
+<section class="section dark" id="experiencias">
+ <div class="sectionhead"><div><div class="eyebrow">02 — El resort</div><h2 class="serif">Cada día, una nueva manera de disfrutar.</h2></div><p>Un destino donde el bienestar, el deporte y la vida junto al Mediterráneo se encuentran en un mismo lugar.</p></div>
+ <div class="featuregrid">
+  <article class="feature"><div class="featureimg" role="img" aria-label="Piscina de resort"></div><div class="num">01 / RELAX</div><h3 class="serif">Agua, sol y calma.</h3><p>Disfruta de los espacios exteriores, los jardines y el ambiente mediterráneo del resort.</p><a class="textlink" href="https://hotel.puenteromano.com/es/" target="_blank" rel="noreferrer">Descubrir el resort ↗</a></article>
+  <article class="feature"><div class="featureimg" role="img" aria-label="Experiencia gastronómica"></div><div class="num">02 / SABOR</div><h3 class="serif">Un viaje gastronómico.</h3><p>Una variada propuesta culinaria que reúne cocina mediterránea y sabores de todo el mundo.</p><a class="textlink" href="#gastronomia">Ver gastronomía ↓</a></article>
+  <article class="feature"><div class="featureimg" role="img" aria-label="Espacio de bienestar"></div><div class="num">03 / BIENESTAR</div><h3 class="serif">Tiempo para ti.</h3><p>Espacios dedicados al cuidado personal, el fitness y las experiencias de bienestar.</p><a class="textlink" href="https://hotel.puenteromano.com/es/" target="_blank" rel="noreferrer">Más información ↗</a></article>
+ </div>
+</section>
+<section class="section" id="gastronomia">
+ <div class="food">
+  <div class="foodphoto" role="img" aria-label="Restaurante de ambiente cálido"></div>
+  <div><div class="eyebrow">03 — Gastronomía</div><h2 class="serif">Sabores que cuentan historias.</h2><p>De una comida relajada junto al mar a una velada especial, la oferta gastronómica de Puente Romano invita a descubrir cocinas, ambientes y momentos diferentes.</p><div class="restaurantlist"><span>Sea Grill</span><span>Nobu</span><span>GAIA</span><span>Cipriani</span><span>Chiringuito</span><span>COYA</span></div><a class="textlink" href="https://www.puenteromano.com/es/" target="_blank" rel="noreferrer">Descubrir restaurantes y bares ↗</a></div>
+ </div>
+</section>
+<section class="quote"><div class="mark">“</div><h2 class="serif">El Mediterráneo no es solo un lugar. Es una forma de vivir.</h2><p>Puente Romano Marbella · Costa del Sol</p></section>
+<section class="section" id="ubicacion">
+ <div class="location">
+  <div><div class="eyebrow">04 — Encuéntranos</div><h2 class="serif">Entre los jardines y el mar.</h2><p class="address">Puente Romano Marbella<br>Bulevar Príncipe Alfonso von Hohenlohe, s/n<br>29602 Marbella, Málaga, España<br><br>Tel. +34 952 82 09 00</p><div class="actions"><a class="btn" style="background:var(--ink);color:var(--cream);border-color:var(--ink)" href="https://www.google.com/maps/search/?api=1&query=Puente+Romano+Marbella" target="_blank" rel="noreferrer">Cómo llegar ↗</a><a class="btn" style="border-color:var(--ink)" href="https://hotel.puenteromano.com/es/" target="_blank" rel="noreferrer">Contactar con el hotel ↗</a></div></div>
+  <div class="locationvisual" role="img" aria-label="Costa mediterránea"></div>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="footerbrand">PUENTE ROMANO · MARBELLA</div><small>Demo conceptual de experiencia digital creada por Transport AI.<br>No es una web oficial ni está afiliada al hotel. La información puede cambiar; consulta siempre los canales oficiales.</small><small>© Demo Transport AI · 2026</small></footer>
+<div class="demo-label">Concepto de demostración · Transport AI</div>
+</body>
+</html>
