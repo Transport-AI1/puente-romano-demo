@@ -221,4 +221,22 @@ body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:v
 <script>
 const drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim');function openDrawer(){drawer.classList.add('open');scrim.classList.add('show');drawer.setAttribute('aria-hidden','false');document.body.classList.add('lock')}function closeDrawer(){drawer.classList.remove('open');scrim.classList.remove('show');drawer.setAttribute('aria-hidden','true');document.body.classList.remove('lock')}document.getElementById('open').addEventListener('click',openDrawer);document.getElementById('close').addEventListener('click',closeDrawer);scrim.addEventListener('click',closeDrawer);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});const pages=['rooms','dining','experiences','booking','contact','faq'];function showPage(name){closeDrawer();document.getElementById('home').style.display=name==='home'?'block':'none';pages.forEach(p=>document.getElementById(p).classList.toggle('active',p===name));window.scrollTo({top:0,behavior:'instant'});history.replaceState(null,'','#'+name)}document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();const a=document.getElementById('arrival').value,d=document.getElementById('departure').value,o=document.getElementById('bookingResult');if(d<=a){o.textContent='La fecha de salida debe ser posterior a la llegada. Recuerda que es solo una simulación.';o.classList.add('show');return}o.innerHTML='<strong>Simulación completada.</strong><br>Has probado una estancia del '+a+' al '+d+'. No se comprobó disponibilidad, no se calculó precio ni se creó una reserva.';o.classList.add('show')});document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const o=document.getElementById('contactResult');o.innerHTML='<strong>Prueba completada.</strong><br>No se ha enviado ningún dato ni mensaje real.';o.classList.add('show')});
 </script>
+
+<!-- Voiceflow AI concierge demo -->
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6ae1c42cd7018256230989a2' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: {
+            url: 'https://runtime-api.voiceflow.com'
+          }
+        });
+      }
+      v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'; v.type = 'text/javascript'; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
 </body></html>
